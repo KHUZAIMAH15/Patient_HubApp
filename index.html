@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PH - PatientHub</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+<body class="bg-gray-50">
+    <nav class=" bg-white shadow-md ">
+        <div class=" w-full bg-gray-800  mx-auto px-4 py-4 flex justify-between items-center fixed top-0 ">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-heartbeat text-blue-600 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-600">PatientHub</h1>
+            </div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#home" class="text-white hover:text-blue-600">Home</a>
+                <a href="#about" class="text-white hover:text-blue-600">About</a>
+                <a href="#services" class="text-white hover:text-blue-600">Services</a>
+                <a href="#contact" class="text-white hover:text-blue-600">Contact</a>
+            </div>
+            <div class="space-x-3">
+                <a id="loginLink" href="/login/login.html"  class=" text-white px-4 py-2 rounded-lg hover:bg-blue-700">Login</a>
+                <a id="signUpLink" href="/sign up/signup.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">Sign Up</a>
+                <a id="appointment"href="/Appointment/appointment.html"  class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">My Appointments</a>
+             <button id="logoutBtn" onclick="logout()" class=" hover:bg-white text-white hover:text-black px-5 py-2 rounded-lg font-medium">Logout</button>
+        </div>
+        </div>
+    </nav>
+    <section id="home" class=" min-h-screen bg-[url(/pic/background1.jpg)] bg-cover opcaity-75 text-white py-20 pt-24">
+        <div class="container mx-auto px-4 text-center py-12">
+            <h2 class="text-5xl font-bold mb-4">Book Your Doctor Appointment</h2>
+            <p class="text-xl mb-8">Easy, Fast, and Secure Healthcare Scheduling</p>
+            <a id="booking" href="/booking/booking.html" class="bg-white text-blue-600 px-8 py-3 rounded-lg text-lg font-semibold hover:bg-gray-100 inline-block">
+                <i class="fas fa-calendar-plus mr-2"></i>Book Now
+            </a>
+        </div>
+    </section>
+
+    <section id="about" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">About</h2>
+            <div class="max-w-3xl mx-auto text-center">
+                <p class="text-gray-700 text-lg mb-4">
+                    PatientHub is a revolutionary patient booking system that simplifies healthcare scheduling. 
+                    Our platform connects patients with healthcare providers, making it easier than ever to 
+                    manage your medical appointments.
+                </p>
+                <p class="text-gray-700 text-lg">
+                    With our user-friendly interface, you can book, view, and manage all your appointments 
+                    in one place, ensuring you never miss an important medical visit.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <section id="services" class="bg-gray-100 py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Services</h2>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-calendar-check text-blue-600 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Easy Booking</h3>
+                    <p class="text-gray-600">Book appointments with your preferred doctors in just a few clicks</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-clock text-blue-600 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Real-time Updates</h3>
+                    <p class="text-gray-600">Get instant updates on your appointment status and availability</p>
+                </div>
+                <div class="bg-white p-6 rounded-lg shadow-md text-center">
+                    <i class="fas fa-mobile-alt text-blue-600 text-5xl mb-4"></i>
+                    <h3 class="text-xl font-semibold mb-3">Mobile Friendly</h3>
+                    <p class="text-gray-600">Access your appointments anywhere, anytime on any device</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact" class="py-16">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-8">Contact Us</h2>
+            <div class="max-w-md mx-auto text-center">
+                <p class="text-gray-700 mb-4">
+                    <i class="fas fa-envelope text-blue-600 mr-2"></i>
+                    @PatientBookingSystem.com
+                 </p>
+                <p class="text-gray-700 mb-4">
+                    <i class="fas fa-phone text-blue-600 mr-2"></i>
+                    +92 345 1234567
+                  </p>
+                <p class="text-gray-700">
+                    <i class="fas fa-map-marker-alt text-blue-600 mr-2"></i>
+                    Karachi, Pakistan
+                </p>
+            </div>
+        </div>
+    </section>
+    <footer class=" w-full bg-gray-800 text-white py-8 ">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 PatientHub . All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="script.js"></script>
+</body>
+</html>

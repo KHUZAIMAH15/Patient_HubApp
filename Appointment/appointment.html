@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Appointments - PatientHub</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" /></head>
+</head>
+<body class="bg-gray-50">
+    <nav class="bg-white shadow-md">
+        <div class=" w-full bg-gray-800  mx-auto px-4 py-4 flex justify-between items-center fixed top-0">
+            <div class="flex items-center space-x-2">
+                <i class="fas fa-heartbeat text-blue-600 text-2xl"></i>
+                <h1 class="text-2xl font-bold text-blue-600">PatientHub</h1>
+            </div>
+            <div class="flex items-center space-x-4">
+                <span id="userName" class="text-gray-700 font-medium"></span>
+                <a href="/booking/booking.html" class="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700">
+                Book Appointment
+                </a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mx-auto px-4 py-24">
+        <div class="mb-8">
+            <h2 class="text-3xl font-bold text-gray-800 mb-2">My Appointments</h2>
+            <p class="text-gray-600">View and manage all your appointments</p>
+            <table class="border-1 P-5">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Date</th>
+      <th>Patient ID</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody id="appointmentList"></tbody>
+</table>
+        </div>
+
+    </div>
+    <footer class=" w-full bg-gray-800 text-white py-8 fixed bottom-0">
+        <div class="container mx-auto px-4 text-center">
+            <p>&copy; 2025 PatientHub. All rights reserved.</p>
+        </div>
+    </footer>
+    <script type="module" src="appointment.js"></script>
+</body>
+</html>
